@@ -30,3 +30,6 @@ jobs:
           aws-region: us-east-1
       - name: Serverless Deploy
         run: npm run-script deploy
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_SIGNING_SECRET: ${{ secrets.SLACK_SIGNING_SECRET }}
