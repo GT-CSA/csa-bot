@@ -9,7 +9,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "predeploy-windows": "npx tsc",
     "deploy-windows": "(for /F \"tokens=*\" %i in (.env) do set %i) && npx serverless deploy",
-    "local-deploy": "(for /F \"tokens=*\" %i in (.env) do set %i) && set SLS_DEBUG=* && npx serverless offline --noPrependStageInUrl"
+    "local-deploy": "(for /F \"tokens=*\" %i in (.env) do set %i) && set SLS_DEBUG=* && npx serverless offline --noPrependStageInUrl",
+    "deploy": "npx serverless deploy"
   },
   "license": "MIT",
   "dependencies": {
