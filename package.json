@@ -4,12 +4,27 @@
   "description": "Getting Started ⚡️ Bolt for JavaScript",
   "main": "app.js",
   "scripts": {
-    "ngrok": "ngrok http 3000",
+    "ngrok": "ngrok.exe http 3000",
     "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy-windows": "npx tsc",
+    "deploy-windows": "(for /F \"tokens=*\" %i in (.env) do set %i) && npx serverless deploy",
+    "local-deploy": "(for /F \"tokens=*\" %i in (.env) do set %i) && set SLS_DEBUG=* && npx serverless offline --noPrependStageInUrl"
   },
   "license": "MIT",
   "dependencies": {
-    "@slack/bolt": "^2.3.0"
+    "@slack/bolt": "^2.3.0",
+    "aws-serverless-express": "^3.4.0",
+    "dotenv": "^8.2.0",
+    "serverless-offline": "^6.8.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.67",
+    "@types/aws-serverless-express": "^3.3.3",
+    "@types/node": "^14.14.14",
+    "dot-env": "0.0.1",
+    "serverless": "^2.16.1",
+    "serverless-plugin-typescript": "^1.1.9",
+    "typescript": "^4.1.3"
   }
 }

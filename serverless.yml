@@ -1,0 +1,30 @@
+service: serverless-bolt-js
+frameworkVersion: '2'
+useDotenv: true
+provider:
+  name: aws
+  runtime: nodejs12.x
+  environment:
+    SLACK_SIGNING_SECRET: ${env:SLACK_SIGNING_SECRET}
+    SLACK_BOT_TOKEN: ${env:SLACK_BOT_TOKEN}
+functions:
+  slack:
+    handler: src/app.handler
+    events:
+      - http:
+          path: slack/events
+          method: post
+plugins:
+  - serverless-plugin-typescript
+  #- serverless-webpack
+  - serverless-offline
+package:
+  individually: true
+# custom:
+#    webpack:
+#     webpackConfig: 'webpack.config.js'   # Name of webpack configuration file 
+#     includeModules: true   # Node modules configuration for packaging 
+#     packager: 'npm'   # Packager that will be used to package your external modules 
+#     excludeFiles:  
+#       - aws-sdk # Provide a glob for files to ignore 
+  
