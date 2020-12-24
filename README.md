@@ -1,56 +1,23 @@
-# Getting Started ⚡️ Bolt for JavaScript
-> Slack app example from 📚 [Getting started with Bolt for JavaScript tutorial][1]
+# CSA Slack Bot
+> Used Slack app example from 📚 [Getting started with Bolt for JavaScript tutorial][1] as a baseline
+> Used plugin router created by Max Kaparawich from the [Hack4Impact Slack Bot][2]
+> Created with Bolt, deployed with [Serverless and AWS Lambda][3]
 
 ## Overview
 
-This is a Slack app built with the [Bolt for JavaScript framework][2] that showcases
-responding to events and interactive buttons.
-
-## Running locally
-
-### 1. Setup environment variables
-
-```zsh
-# Replace with your signing secret and token
-export SLACK_BOT_TOKEN=<your-bot-token>
-export SLACK_SIGNING_SECRET=<your-signing-secret>
-```
-
-### 2. Setup your local project
-
-```zsh
-# Clone this project onto your machine
-git clone https://github.com/slackapi/bolt-js-getting-started-app.git
-
-# Change into the project
-cd bolt-js-getting-started-app/
-
-# Install the dependencies
-npm install
-```
-
-### 3. Start servers
-
-[Setup ngrok][3] to create a local requests URL for development.
-
-```zsh
-npm run ngrok
-npm run start
-```
+This is a Slack app built with the Bolt for JavaScript framework that is planned to have a [donut date pairing feature][https://www.donut.com/] 
+and a member participation and tracking feature [using Airtable][https://dev.to/hacubu/how-to-use-airtable-as-a-production-database-analyzing-airtable-performance-41e9] for the rest of CSA board to use
 
 ## Contributing
 
-### Issues and questions
+Look at the issues tab and assign yourself one. We will use Zenhub for project management, so you can go to the Zenhub tab too if you have that installed.
 
-Found a bug or have a question about this project? We'd love to hear from you!
+To complete issues, make a branch off of main using this format for branch name:
+```
+[your-first-name]/[issue-#]/[slug]
+```
+do whatever it is the issue tells you to do, and create a PR.
 
-1. Browse to [slackapi/bolt-js/issues][4]
-1. Create a new issue
-1. Select the `[x] examples` category
-
-See you there and thanks for helping to improve Bolt for everyone!
-
-[1]: https://slack.dev/bolt-js/tutorial/getting-started
-[2]: https://slack.dev/bolt-js/
-[3]: https://slack.dev/bolt-js/tutorial/getting-started#setting-up-events
-[4]: https://github.com/slackapi/bolt-js/issues/new
+[1]: https://github.com/slackapi/bolt-js-getting-started-app
+[2]: https://github.com/hack4impact/slack-bot
+[3]: https://slack.dev/bolt-js/deployments/aws-lambda
