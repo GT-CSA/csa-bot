@@ -20,6 +20,8 @@ To complete issues, make a branch off of main using this format for branch name:
 ```
 do whatever it is the issue tells you to do, and create a PR.
 
+Code will be checked for syntactical issues, but CD is set up, meaning new code is automatically deployed to AWS Lambda and changes will be reflected in the live slack bot
+
 [1]: https://github.com/slackapi/bolt-js-getting-started-app
 [2]: https://github.com/hack4impact/slack-bot
 [3]: https://slack.dev/bolt-js/deployments/aws-lambda
