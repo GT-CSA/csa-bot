@@ -38,4 +38,9 @@ export default async function test(app:App, pre:PrefixFunction){
         await ack();
         await say(`<@${body.user.id}> clicked the button`);
     });
+
+    app.command('/echo', async ({ command, ack, say }) => {
+        await ack()
+        await say(`${command.text}`);
+      });
 }
