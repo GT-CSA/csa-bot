@@ -9,6 +9,7 @@ on:
       - main
       - develop
 jobs:
+  #TODO: Add CI, CD is below
   deploy:
     runs-on: ubuntu-latest
     strategy:
