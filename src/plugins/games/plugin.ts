@@ -1,6 +1,6 @@
 import type { App } from '@slack/bolt'
 import type { PrefixFunction } from '../../util/plugin'
-import { ticTacToe, setClickListeners } from './modals/ticTacToe'
+import { ticTacToe, setClickListeners } from './scripts/ticTacToe'
 
 export default async function games(app:App, pre:PrefixFunction){
     app.command(`/${pre('tic-tac-toe')}`, async ({ command, ack, respond}) => {
