@@ -1,0 +1,35 @@
+view {
+  type: 'home',
+  callback_id: 'home_view',
+  blocks: [
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*PLEASE HELP ME ;w;"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "Button things"
+      }
+    },
+    {
+      "type": "actions",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "Click me!"
+          }
+        }
+      ]
+    }
+  ]
+}

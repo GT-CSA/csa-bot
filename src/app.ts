@@ -3,6 +3,7 @@ import awsServerlessExpress from 'aws-serverless-express';
 import loadPlugins from './util/plugin';
 import {signingSecret, botToken} from './util/config'
 import { APIGatewayProxyEvent, Context } from 'aws-lambda';
+import * as modal from 'path to json'
 
 // Initialize your custom receiver
 const expressReceiver = new ExpressReceiver({
@@ -28,7 +29,19 @@ loadPlugins(app)
 
 // Handle the Lambda function event
 export const handler = (event: APIGatewayProxyEvent, context: Context) => {
-  
+
   console.log('⚡️ Bolt app is running!');
   awsServerlessExpress.proxy(server, event, context);
 };
+
+app.event('app_home_opened', async ({event, client, context}) => {
+  try {
+    const result = await client.view.publish({
+      user_id = event.user,
+      modal
+    });
+  }
+  catch (error) {
+    console.error(error);
+  }
+});
